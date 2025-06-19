@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "trading",
 ]
 
 MIDDLEWARE = [
@@ -163,6 +164,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Django Debug Toolbar
 # https://django-debug-toolbar.readthedocs.io/
 if DEBUG:
+    # INSTALLED_APPS += ['django-extensions']
     # We need to configure an IP address to allow connections from, but in
     # Docker we can't use 127.0.0.1 since this runs in a container but we want
     # to access the toolbar from our browser outside of the container.
