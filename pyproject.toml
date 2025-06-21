@@ -16,7 +16,9 @@ dependencies = [
   "whitenoise==6.9.0",
   'ccxt[pro]',
   'cctx',
-  'django-extensions'
+  'django-extensions',
+  'scikit-learn',
+  'python-telegram-bot',
 ]
 
 [tool.ruff]

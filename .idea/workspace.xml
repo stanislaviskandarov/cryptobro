@@ -4,23 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/src/trading/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/management/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/management/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/binance_stream.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Изменена архитектура, все классы разбиты по файлам">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,12 +40,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nevizar/projects/cryptobro/src/trading",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "last_opened_file_path": "/home/nevizar/projects/cryptobro/src/trading/services/strategies",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/trading/services/strategies" />
       <recent name="$PROJECT_DIR$/src/trading" />
       <recent name="$PROJECT_DIR$/src/trading/management" />
       <recent name="$PROJECT_DIR$/src/trading/management/commands" />
@@ -83,7 +81,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749968110783</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add basic binance stream with signals">
+      <option name="closed" value="true" />
+      <created>1750361789248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750361789248</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Изменена архитектура, все классы разбиты по файлам">
+      <option name="closed" value="true" />
+      <created>1750501595462</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750501595462</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +113,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="Add basic binance stream with signals" />
+    <MESSAGE value="Изменена архитектура, все классы разбиты по файлам" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменена архитектура, все классы разбиты по файлам" />
   </component>
 </project>
