@@ -19,6 +19,7 @@ dependencies = [
   'django-extensions',
   'scikit-learn',
   'python-telegram-bot',
+  'matplotlib',
 ]
 
 [tool.ruff]

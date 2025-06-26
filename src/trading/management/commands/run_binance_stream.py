@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 import asyncio
 from trading.services.binance_stream import BinanceBatchTradeStream
 
+
 class Command(BaseCommand):
     help = "Запустить Binance WebSocket стрим"
 

@@ -8,6 +8,7 @@ public/*
 public_collected/*
 !public_collected/.keep
 
+src/tmp*
 .env*
 !.env.example
 docker-compose.override.yml

@@ -2,7 +2,7 @@ import asyncio
 import ccxt.pro
 import aiohttp
 
-from .strategies.trade_engine import TradeEngine
+from .trade_engine.trade_engine import TradeEngine
 
 TELEGRAM_BOT_TOKEN = "5045108885:AAFiFgJb4YyEsllnOP5grmqWpDYb1ExHzoE"
 TELEGRAM_CHAT_ID = "@binansenoficarions"
@@ -51,9 +51,10 @@ class BinanceBatchTradeStream:
 
     async def stream_symbol(self, symbol):
         config = {
-            'enabled_strategies': ['MyStrategy'],
+            'enabled_strategies': ['GigaStrategy'],
+            'limit': 10000, # Количество хранимых трейдов
         }
-        engine = TradeEngine(pair_name=symbol, stock_name="binance", config=config, limit=self.limit)
+        engine = TradeEngine(pair_name=symbol, stock_name="binance", config=config)
 
         print(f"Subscribing to {symbol}")
         while self.running:

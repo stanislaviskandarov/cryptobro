@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Изменена архитектура, все классы разбиты по файлам">
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/ama_indicator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/indicator_base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/macd_indicator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/supertrend_indicator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/binance_stream.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/strategies/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/strategies/my_strategy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/strategies/trade_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +39,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2yUd9yqSTiFmyZ8hnz5lMKizVLX" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -36,27 +50,61 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.my_strategy.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nevizar/projects/cryptobro/src/trading/services/strategies",
+    "last_opened_file_path": "/home/nevizar/projects/cryptobro/src/trading/services/trade_engine/indicators",
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/trading/services/trade_engine/indicators" />
       <recent name="$PROJECT_DIR$/src/trading/services/strategies" />
       <recent name="$PROJECT_DIR$/src/trading" />
       <recent name="$PROJECT_DIR$/src/trading/management" />
       <recent name="$PROJECT_DIR$/src/trading/management/commands" />
-      <recent name="$PROJECT_DIR$/src/trading/services" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/trading/services/trade_engine" />
+      <recent name="$PROJECT_DIR$/src/trading/services/engines" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="pip install" />
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="giga_strategy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cryptobro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/trading/services/trade_engine/strategies" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.giga_strategy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -97,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750501595462</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Изменена архитектура, все классы разбиты по файлам">
+      <option name="closed" value="true" />
+      <created>1750706242616</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750706242616</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
