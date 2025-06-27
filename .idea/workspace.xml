@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Изменена архитектура, все классы разбиты по файлам">
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/ama_indicator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/indicator_base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/macd_indicator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/indicators/supertrend_indicator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" afterDir="false" />
+    <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Вместо сообщения - Пасхалка">
+      <change afterPath="$PROJECT_DIR$/src/trading/services/chart_reporter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/services/binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/binance_stream.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/services/strategies/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/services/strategies/my_strategy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/services/strategies/trade_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/telega.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/telega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +145,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750706242616</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Вместо сообщения - Пасхалка">
+      <option name="closed" value="true" />
+      <created>1750976909386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750976909386</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Вместо сообщения - Пасхалка">
+      <option name="closed" value="true" />
+      <created>1750977011826</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1750977011826</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +179,7 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="Add basic binance stream with signals" />
     <MESSAGE value="Изменена архитектура, все классы разбиты по файлам" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменена архитектура, все классы разбиты по файлам" />
+    <MESSAGE value="Вместо сообщения - Пасхалка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Вместо сообщения - Пасхалка" />
   </component>
 </project>

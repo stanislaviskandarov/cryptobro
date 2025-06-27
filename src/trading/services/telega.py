@@ -1,20 +1,32 @@
-from telegram import Bot
+# from telegram import Bot
+import requests
 
-TELEGRAM_BOT_TOKEN = "5045108885:AAFiFgJb4YyEsllnOP5grmqWpDYb1ExHzoE"
 TELEGRAM_CHAT_ID = "@binansenoficarions"
+TELEGRAM_BOT_TOKEN = "5045108885:AAFiFgJb4YyEsllnOP5grmqWpDYb1ExHzoE"
 
-bot = Bot(token=TELEGRAM_BOT_TOKEN)
 
-async def send_telegram_message(message: str, binance_symbol: str = None):
-    if binance_symbol:
-        message += f"\n[🔗 Перейти на Binance](https://www.binance.com/en/trade/{binance_symbol.replace('/', '_')})"
-
+def send_telegram_message(text: str):
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    data = {
+        "chat_id": TELEGRAM_CHAT_ID,
+        "text": text
+    }
     try:
-        await bot.send_message(
-            chat_id=TELEGRAM_CHAT_ID,
-            text=message,
-            parse_mode='Markdown',
-            disable_web_page_preview=True
-        )
+        requests.post(url, data=data, timeout=10)
     except Exception as e:
-        print(f"❌ Ошибка отправки сообщения в Telegram: {e}")
+        print(f"[Telegram] Ошибка при отправке текста: {e}")
+
+
+def send_telegram_image(caption: str, file_path: str):
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto"
+    try:
+        with open(file_path, "rb") as f:
+            files = {"photo": f}
+            data = {
+                "chat_id": TELEGRAM_CHAT_ID,
+                "caption": caption
+            }
+            requests.post(url, data=data, files=files, timeout=10)
+    except Exception as e:
+        print(f"[Telegram] Ошибка при отправке изображения: {e}")
+

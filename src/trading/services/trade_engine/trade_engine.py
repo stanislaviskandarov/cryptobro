@@ -2,17 +2,19 @@ from collections import deque
 import asyncio
 
 from .strategies.giga_strategy import GigaStrategy
+from ..chart_reporter import ChartReporter
 
 STRATEGIES = {
     'GigaStrategy': GigaStrategy,
 }
 
 class TradeEngine:
-    def __init__(self, pair_name, stock_name, config):
-        self.pair_name = pair_name
-        self.stock_name = stock_name
+    def __init__(self, config):
+        self.pair_name = config['pair_name']
+        self.stock_name = config['stock_name']
         self.config = config
         self.trades = deque(maxlen=self.config['limit'])
+        self.chart_reporter = ChartReporter(self.pair_name)
 
         self.strategies = None
         self.init_strategies(config)

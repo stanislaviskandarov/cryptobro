@@ -4,35 +4,6 @@ import aiohttp
 
 from .trade_engine.trade_engine import TradeEngine
 
-TELEGRAM_BOT_TOKEN = "5045108885:AAFiFgJb4YyEsllnOP5grmqWpDYb1ExHzoE"
-TELEGRAM_CHAT_ID = "@binansenoficarions"
-
-
-async def send_telegram_message(message, binance_symbol=None):
-    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
-    keyboard = {
-        "inline_keyboard": [[
-            {
-                "text": "🔗 Перейти на Binance",
-                "url": f"https://www.binance.com/en/trade/{binance_symbol.replace('/', '_')}"
-            }
-        ]]
-    } if binance_symbol else None
-
-    data = {
-        "chat_id": TELEGRAM_CHAT_ID,
-        "text": message,
-        "parse_mode": "Markdown",
-        "disable_web_page_preview": True
-    }
-    if keyboard:
-        data["reply_markup"] = keyboard
-
-    async with aiohttp.ClientSession() as session:
-        async with session.post(url, json=data) as resp:
-            if resp.status != 200:
-                print(f"⚠️ Telegram error: {await resp.text()}")
-
 
 class BinanceBatchTradeStream:
     def __init__(self, limit=10000, batch_size=50, delay_between_batches=5):
@@ -52,9 +23,11 @@ class BinanceBatchTradeStream:
     async def stream_symbol(self, symbol):
         config = {
             'enabled_strategies': ['GigaStrategy'],
+            'pair_name': symbol,
+            'stock_name': "binance",
             'limit': 10000, # Количество хранимых трейдов
         }
-        engine = TradeEngine(pair_name=symbol, stock_name="binance", config=config)
+        engine = TradeEngine(config)
 
         print(f"Subscribing to {symbol}")
         while self.running:
