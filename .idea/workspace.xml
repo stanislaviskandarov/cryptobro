@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Вместо сообщения - Пасхалка">
-      <change afterPath="$PROJECT_DIR$/src/trading/services/chart_reporter.py" afterDir="false" />
+    <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Добавил индикаторы, отрефакторил и реструктурировал код">
+      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/valuer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/management/commands/run_binance_stream.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/services/binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/binance_stream.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/services/telega.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/telega.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/chart_reporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/chart_reporter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" afterDir="false" />
     </list>
@@ -40,17 +39,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.my_strategy.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nevizar/projects/cryptobro/src/trading/services/trade_engine/indicators",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.my_strategy.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nevizar/projects/cryptobro/src/trading/services/trade_engine/indicators&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/trading/services/trade_engine/indicators" />
@@ -161,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750977011826</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Добавил индикаторы, отрефакторил и реструктурировал код">
+      <option name="closed" value="true" />
+      <created>1750992252857</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1750992252857</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,6 +187,7 @@
     <MESSAGE value="Add basic binance stream with signals" />
     <MESSAGE value="Изменена архитектура, все классы разбиты по файлам" />
     <MESSAGE value="Вместо сообщения - Пасхалка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вместо сообщения - Пасхалка" />
+    <MESSAGE value="Добавил индикаторы, отрефакторил и реструктурировал код" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил индикаторы, отрефакторил и реструктурировал код" />
   </component>
 </project>

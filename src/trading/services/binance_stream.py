@@ -4,6 +4,10 @@ import aiohttp
 
 from .trade_engine.trade_engine import TradeEngine
 
+MIN_USDT_VOLUME = 1000000  # Минимальный объём торгов в USDT за 24ч
+BANNED_PAIRS = {"TUSD/USDT", "BUSD/USDT", "USDC/USDT"}  # Чёрный список пар
+MIN_PAIR_COUNT = 1  # Минимальное количество пар для обработки
+
 
 class BinanceBatchTradeStream:
     def __init__(self, limit=10000, batch_size=50, delay_between_batches=5):
@@ -16,8 +20,26 @@ class BinanceBatchTradeStream:
 
     async def fetch_usdt_symbols(self):
         markets = await self.exchange.load_markets()
-        symbols = [s for s in markets if s.endswith('/USDT') and markets[s]['active']]
-        print(f"Found {len(symbols)} USDT pairs")
+        tickers = await self.exchange.fetch_tickers()
+
+        symbols = []
+        for symbol, market in markets.items():
+            if not symbol.endswith('/USDT') or not market['active']:
+                continue
+            if symbol in BANNED_PAIRS:
+                continue
+
+            ticker = tickers.get(symbol)
+            if not ticker:
+                continue
+
+            volume = ticker.get('quoteVolume', 0)
+            if volume and volume >= MIN_USDT_VOLUME:
+                symbols.append(symbol)
+
+        if MIN_PAIR_COUNT > 0:
+            symbols = symbols[:MIN_PAIR_COUNT]
+        print(f"Found {len(symbols)} liquid USDT pairs (min vol: {MIN_USDT_VOLUME})")
         return symbols
 
     async def stream_symbol(self, symbol):
@@ -31,15 +53,14 @@ class BinanceBatchTradeStream:
 
         print(f"Subscribing to {symbol}")
         while self.running:
-            try:
+            # try:
                 trade = await self.exchange.watch_trades(symbol)
                 if isinstance(trade, list):
                     trade = trade[-1]
-                # print(trade)
                 await engine.add(trade)
-            except Exception as e:
-                print(f"[{symbol}] WebSocket error: {e}")
-                await asyncio.sleep(3)
+            # except Exception as e:
+            #     print(f"[{symbol}] WebSocket error: {e}")
+            #     await asyncio.sleep(3)
 
     async def run(self):
         self.running = True

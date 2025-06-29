@@ -1,7 +1,9 @@
+from datetime import datetime
 from collections import deque
 import asyncio
 
 from .strategies.giga_strategy import GigaStrategy
+from .valuer import Valuer
 from ..chart_reporter import ChartReporter
 
 STRATEGIES = {
@@ -37,7 +39,8 @@ class TradeEngine:
     #  'side': 'sell', 'takerOrMaker': None, 'price': 107275.0, 'amount': 0.0177, 'cost': 1898.7675,
     #  'fee': {'cost': None, 'currency': None}, 'fees': []}
     async def add(self, trade):
-        self.trades.append(trade)
+        dt = datetime.fromisoformat(trade['datetime'].replace("Z", "+00:00")).replace(tzinfo=None)
+        self.trades.append(Valuer(dt, trade['price']))
         await self.on_update()
 
     async def on_update(self) -> None:
