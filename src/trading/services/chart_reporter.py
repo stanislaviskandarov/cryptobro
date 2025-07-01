@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import os
 from PIL import Image
 import numpy as np
+import asyncio
 from django.conf import settings
 
 from .telega import send_telegram_image, send_telegram_message
@@ -15,7 +16,7 @@ class ChartReporter:
         os.makedirs(self.tmp_dir, exist_ok=True)
         self.safe_pair_name = self.pair_name.replace("/", "_")
 
-    def draw_valuer_stripe(self, valuers: list, path: str, width: int = 1024, height: int = 16, k: float = 0.001):
+    async def draw_valuer_stripe(self, valuers: list, path: str, width: int = 6000, height: int = 64, k: float = 0.001):
         full_width = width + 100  # +100px отступ слева
         save_path = os.path.join(self.tmp_dir, path)
 
@@ -105,7 +106,7 @@ class ChartReporter:
         plt.savefig(save_path)
         plt.close()
 
-    def concatenate_images_vertically(self, image_names, save_name):
+    async def concatenate_images_vertically(self, image_names, save_name):
         save_path = os.path.join(self.tmp_dir, save_name)
         images = [Image.open(os.path.join(self.tmp_dir, name)) for name in image_names]
         if not images:

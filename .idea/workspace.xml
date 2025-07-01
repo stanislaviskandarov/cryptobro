@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="228065fa-07ff-4b76-807c-ad8dbfe08625" name="Changes" comment="Добавил индикаторы, отрефакторил и реструктурировал код">
-      <change afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/valuer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/services/binance_stream.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/binance_stream.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/services/chart_reporter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/chart_reporter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/strategies/giga_strategy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/trade_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/trading/services/trade_engine/valuer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/trading/services/trade_engine/valuer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
